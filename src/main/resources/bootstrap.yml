@@ -2,13 +2,12 @@ spring:
   cloud:
     azure:
       appconfiguration:
-        enabled: true
-        stores[0]:
-          connection-string: Endpoint=https://config-test-app.azconfig.io;Id=/Ojn;Secret=5EJNIqdUxTi7h4aP3pYz4HErKJcykSUm2ttGVud7A3QMLyV3FVAGJQQJ99CCACYeBjFGrHIfAAACAZAC3gKW
-          selects[0]:
-            key-filter: /${spring.application.name}/
+        stores:
+          -  connection-string: Endpoint=https://config-app-prueba-first.azconfig.io;Id=aKEX;Secret=9FiuDWhbJj7VDbCXnhO1LjuzreqYw7KVQSVcCJ0mXFuJ4eIu3sVsJQQJ99CCACYeBjFGrHIfAAACAZAC4aX2
+             selects:
+               - key-filter: /${spring.application.name}/
   application:
-    name: appconfig-java
+    name: app-config-azure
   profiles:
     active: dev
 management:
